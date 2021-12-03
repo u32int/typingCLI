@@ -15,7 +15,7 @@ def get_text_line(wordlist, length):
     return ' '.join([random.choice(wordlist) for _ in range(0, length)])
 
 
-def start_game(stdscr, wordlist):
+def start_game(stdscr, wordlist, rounds):
     stdscr.clear()
     stdscr.refresh()
     # display word loading message
@@ -28,7 +28,7 @@ def start_game(stdscr, wordlist):
 
     load_text = "Loading words.."
     displayCenterTxt(stdscr, load_text, 1)
-    word_list = [word.strip() for word in open("english1k.txt") if len(word) > 1]
+    word_list = [word.strip() for word in open(wordlist) if len(word.strip()) > 1]
        
     
     stats = {
@@ -76,7 +76,6 @@ def start_game(stdscr, wordlist):
             except:
                 continue
 
-    rounds = 3
     for _ in range(0, rounds):
         game_loop()
 
