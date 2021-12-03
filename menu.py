@@ -64,7 +64,7 @@ def init_menu(stdscr):
     exitGameButton = Button(int(os.get_terminal_size()[1] / 2) + 2, int(os.get_terminal_size()[0] / 2), "Exit", stdscr)
     # option buttons
     wordlistButton = OptionButton(int(os.get_terminal_size()[1] / 2), int(os.get_terminal_size()[0] / 2), "", stdscr)
-    wordlistButton.config(["english1k.txt", "english100.txt", "polish1k.txt"])
+    wordlistButton.config(["english1k.txt", "english100.txt", "polish100.txt"])
 
 
     # buttons are ordered by their actuall screen position - exitGameButton is the lowest on screen for example
